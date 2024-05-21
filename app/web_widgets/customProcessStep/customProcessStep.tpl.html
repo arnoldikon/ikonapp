@@ -1,0 +1,8 @@
+<div class="process">
+    <div class="process-row">
+        <div class="process-step" ng-repeat="content in properties.content track by $index">
+            <button type="button" class="btn btn-{{properties.currentStep==content.name ? 'success' : 'default'}} btn-circle" disabled="disabled"><i class="{{content.icon}}"></i></button>
+            <p>{{content.name}}</p>
+        </div>
+    </div>
+</div>

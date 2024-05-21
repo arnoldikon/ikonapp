@@ -1,0 +1,774 @@
+{
+  "id" : "KAManageAnggota",
+  "name" : "KAManageAnggota",
+  "type" : "form",
+  "uuid" : "bffb74b6-f8ec-46b1-b761-2159bd943de9",
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1710470462837,
+  "description" : "Page generated with Bonita UI designer",
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "header" : {
+            "type" : "interpolation",
+            "value" : "{{formType}} Data Anggota"
+          },
+          "subHeader" : {
+            "type" : "interpolation"
+          },
+          "iconClass" : {
+            "type" : "constant"
+          },
+          "showReturn" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "returnURL" : {
+            "type" : "constant"
+          },
+          "lineSeparator" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "e0f4da52-1e0d-4dfa-a872-13df34a93277",
+        "hasValidationError" : false,
+        "id" : "customHeader"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "anggotaData.tipe!=null"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "8b8a53d9-8938-47c4-a674-6aebc3d8ea86",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Pilih Tipe Anggota"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 4"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "a8c796f4-9a44-41c9-a0f9-cd7d1bf8e33a",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "listLabel" : {
+                  "type" : "constant",
+                  "value" : [
+                    "<i class='fas fa-user'></i><br>Personal",
+                    "<i class='fas fa-building'></i><br>Entitas"
+                  ]
+                },
+                "onClick" : {
+                  "type" : "variable",
+                  "value" : "anggotaData.tipe"
+                },
+                "align" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "style" : {
+                  "type" : "constant",
+                  "value" : "default"
+                },
+                "active" : {
+                  "type" : "constant",
+                  "value" : "success"
+                },
+                "listValue" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Personal",
+                    "Entitas"
+                  ]
+                }
+              },
+              "reference" : "95ba5530-cdba-41e2-8f40-d3e2b65fae92",
+              "hasValidationError" : false,
+              "id" : "customButtonGroupValue"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "formContainer",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "anggotaData.tipe==null"
+          }
+        },
+        "reference" : "21b7bcc6-566f-4e4e-a91b-2630aef21094",
+        "hasValidationError" : false,
+        "id" : "pbFormContainer",
+        "container" : {
+          "type" : "container",
+          "dimension" : {
+            "xs" : 12
+          },
+          "propertyValues" : { },
+          "reference" : "70aa11e3-1abe-472e-91e0-68aaaed53cfa",
+          "hasValidationError" : false,
+          "id" : "pbContainer",
+          "rows" : [
+            [
+              {
+                "type" : "fragment",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  }
+                },
+                "reference" : "7cecfcc3-069e-43e9-83a0-69a673e6c339",
+                "hasValidationError" : false,
+                "id" : "Anggota",
+                "binding" : {
+                  "anggota" : "anggotaData",
+                  "personal" : "personalData",
+                  "entitas" : "entitasData",
+                  "kontak" : "kontakData",
+                  "act" : "act",
+                  "imgPP" : "imgPP",
+                  "imgKTP" : "imgKTP"
+                }
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<hr>"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  }
+                },
+                "reference" : "def506bc-7dba-4d9b-97db-ef38243c0763",
+                "hasValidationError" : false,
+                "id" : "pbText"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 6,
+                  "sm" : 6,
+                  "xs" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "removeItem" : {
+                    "type" : "variable"
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "primary"
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "<i class=\"fas fa-save\"></i> Simpan"
+                  },
+                  "dataToSend" : {
+                    "type" : "expression",
+                    "value" : "formOutput"
+                  },
+                  "dataFromError" : {
+                    "type" : "variable",
+                    "value" : "formOutput._submitError"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "collectionPosition" : {
+                    "type" : "constant"
+                  },
+                  "targetUrlOnSuccess" : {
+                    "type" : "interpolation",
+                    "value" : "{{returnUrl}}"
+                  },
+                  "action" : {
+                    "type" : "constant",
+                    "value" : "Start process"
+                  },
+                  "collectionToModify" : {
+                    "type" : "variable"
+                  },
+                  "valueToAdd" : {
+                    "type" : "expression"
+                  },
+                  "disabled" : {
+                    "type" : "expression",
+                    "value" : "$form.$invalid"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
+                  }
+                },
+                "reference" : "e959969b-186b-4c63-bd23-e3a383f5cd16",
+                "hasValidationError" : false,
+                "id" : "pbButton",
+                "description" : ""
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 6,
+                  "sm" : 6,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "Batal"
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "URL"
+                  },
+                  "targetUrl" : {
+                    "type" : "expression",
+                    "value" : "returnUrl"
+                  },
+                  "pageToken" : {
+                    "type" : "constant"
+                  },
+                  "processName" : {
+                    "type" : "constant"
+                  },
+                  "processVersion" : {
+                    "type" : "constant"
+                  },
+                  "taskId" : {
+                    "type" : "constant"
+                  },
+                  "caseId" : {
+                    "type" : "constant"
+                  },
+                  "target" : {
+                    "type" : "constant",
+                    "value" : "_top"
+                  },
+                  "appToken" : {
+                    "type" : "constant"
+                  },
+                  "urlParams" : {
+                    "type" : "constant"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "right"
+                  },
+                  "buttonStyle" : {
+                    "type" : "constant",
+                    "value" : "danger"
+                  }
+                },
+                "reference" : "3b74d249-b1ab-4862-a541-870bcec5519d",
+                "hasValidationError" : false,
+                "id" : "pbLink"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "allowHtml" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "!formOutput._submitError.message"
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : "alert alert-danger col-lg-6 col-lg-offset-3"
+                  },
+                  "label" : {
+                    "type" : "interpolation"
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "left"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "8161dc54-29d4-44b5-a3bb-34e2fcf27921",
+                "hasValidationError" : false,
+                "id" : "pbText",
+                "description" : ""
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : ""
+          },
+          "level" : {
+            "type" : "constant",
+            "value" : "Level 2"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "bf54ecc1-59ed-473f-8d0a-43ffa9e5adb8",
+        "hasValidationError" : false,
+        "id" : "pbTitle"
+      }
+    ]
+  ],
+  "variables" : {
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"anggotaInput\" : {\r",
+        "    \"entitasId\" : 0,\r",
+        "    \"tipe\" : \"\"\r",
+        "  },\r",
+        "  \"personalInput\" : {\r",
+        "    \"namaLengkap\" : \"\",\r",
+        "    \"tempatLahir\":\"\",\r",
+        "    \"tglLahir\" : null,\r",
+        "    \"tglMulaiKerja\":null,\r",
+        "    \"jenisKelamin\" : \"\",\r",
+        "    \"statusPernikahan\" : \"\",\r",
+        "    \"noKTP\" : \"\",\r",
+        "    \"jabatan\" : \"\"\r",
+        "  },\r",
+        "  \"entitasInput\" : {\r",
+        "    \"namaEntitas\" : \"\",\r",
+        "    \"jenis\" : \"\",\r",
+        "    \"noLegal\" : \"\",\r",
+        "    \"bidangUsaha\" : \"\"\r",
+        "  },\r",
+        "  \"kontakInput\" : {\r",
+        "    \"alamat1\" : \"\",\r",
+        "    \"alamat2\" : \"\",\r",
+        "    \"kecamatan\" : \"\",\r",
+        "    \"kota\" : \"\",\r",
+        "    \"provinsi\" : \"\",\r",
+        "    \"kodepos\" : null,\r",
+        "    \"noTlp\" : \"\",\r",
+        "    \"noHp\" : \"\",\r",
+        "    \"noFax\" : \"\",\r",
+        "    \"email\":\"\",\r",
+        "    \"website\":\"\"\r",
+        "  },\r",
+        "  \"actionInput\" : \"\",\r",
+        "  \"attachmentsDocumentInput\" : [],\r",
+        "  \"fotoProfilDocumentInput\":[],\r",
+        "  \"scanKTPDocumentInput\":[]\r",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "submit_errors_list" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.formOutput && $data.formOutput._submitError && $data.formOutput._submitError.explanations){",
+        "\tconst liElements = $data.formOutput._submitError.explanations",
+        "\t\t.filter(cause => cause !== null)",
+        "\t\t.map(cause => \"<li>\" + cause + \"</li>\")",
+        "\t\t.join('');",
+        "\tif(liElements){",
+        "\t\treturn \"<ul>\" + liElements + \"</ul>\";",
+        "\t}",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "formOutput" : {
+      "type" : "expression",
+      "value" : [
+        "var out={",
+        "\tanggotaInput: $data.anggotaData,",
+        "\tpersonalInput: $data.personalData,",
+        "\tentitasInput: $data.entitasData,",
+        "\tkontakInput: $data.kontakData,",
+        "\tactionInput: $data.act,",
+        "\tattachmentsDocumentInput: $data.formInput.attachmentsDocumentInput,",
+        "\tfotoProfilDocumentInput: [],",
+        "\tscanKTPDocumentInput: []",
+        "};",
+        "",
+        "if($data.imgPP){out.fotoProfilDocumentInput.push($data.imgPP);}",
+        "if($data.imgKTP){out.scanKTPDocumentInput.push($data.imgKTP);}",
+        "",
+        "return out;"
+      ],
+      "exposed" : false
+    },
+    "act" : {
+      "type" : "urlparameter",
+      "value" : [
+        "act"
+      ],
+      "exposed" : false
+    },
+    "formType" : {
+      "type" : "expression",
+      "value" : [
+        "var actDesc = \"\";",
+        "",
+        "if($data.act==1){actDesc = \"Input\"}",
+        "else if($data.act==2){actDesc = \"Edit\"}",
+        "else if($data.act==3){actDesc = \"Hapus\"}",
+        "else if($data.act==9){actDesc = \"Upload\"}",
+        "",
+        "return actDesc;"
+      ],
+      "exposed" : false
+    },
+    "kontakData" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.pid){ return $data.kontak; }",
+        "else{return $data.formInput.kontakInput}"
+      ],
+      "exposed" : false
+    },
+    "pid" : {
+      "type" : "urlparameter",
+      "value" : [
+        "pid"
+      ],
+      "exposed" : false
+    },
+    "anggotaData" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.pid){ return $data.anggota[0]; }",
+        "else{return $data.formInput.anggotaInput}"
+      ],
+      "exposed" : false
+    },
+    "anggota" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findByPersistenceId [id.ikon.keanggotaan.Anggota]\",\"businessObjectName\":\"Anggota\",\"query\":{\"name\":\"findByPersistenceId\",\"displayName\":\"findByPersistenceId\"},\"id\":\"id.ikon.keanggotaan.Anggota\",\"filters\":[{\"name\":\"persistenceId\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{pid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "personalData" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.pid){ return $data.anggotaData.personal; }",
+        "else{return $data.formInput.personalInput}"
+      ],
+      "exposed" : false
+    },
+    "entitasData" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.pid){ return $data.anggotaData.entitas; }",
+        "else{return $data.formInput.entitasInput}"
+      ],
+      "exposed" : false
+    },
+    "kontak" : {
+      "type" : "url",
+      "value" : [
+        "{{anggotaData|lazyRef:'kontak'}}"
+      ],
+      "exposed" : false
+    },
+    "imgPP" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "imgKTP" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "returnUrl" : {
+      "type" : "expression",
+      "value" : [
+        "return window.top.location.href;"
+      ],
+      "exposed" : false
+    }
+  },
+  "assets" : [
+    {
+      "id" : "f951f17a-9af2-45bb-9530-eccf75d63b0f",
+      "name" : "entitas.png",
+      "type" : "img",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "af3191a2-5da4-41e9-8d57-51016db133b9",
+      "name" : "fotoProfil.png",
+      "type" : "img",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "f60cec7e-3a08-47f9-a9aa-ca14f011ce0f",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "bed4df4f-4678-4954-87ab-991886c2e081",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "f46621ea-523b-42f9-9417-a224ab6e44d6",
+      "name" : "idcard.png",
+      "type" : "img",
+      "order" : 3,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}

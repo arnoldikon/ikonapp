@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="dashboard" version="1.0" profile="User" homePage="tasklist" state="ACTIVATED" layout="custompage_KubikLayoutV2" theme="custompage_themeBonita">
+        <displayName>Dashboard</displayName>
+        <description></description>
+        <applicationPages>
+            <applicationPage customPage="custompage_DASHTasklist" token="tasklist"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="tasklist">
+                <displayName>Tasklist</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

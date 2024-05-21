@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="marketplace" version="1.0" profile="User" homePage="marketplace" state="ACTIVATED" layout="custompage_KubikLayoutV2" theme="custompage_themeBonita">
+        <displayName>Marketplace</displayName>
+        <description>Belanja produk untuk anggota koperasi.</description>
+        <applicationPages>
+            <applicationPage customPage="custompage_TRXMarketplace" token="marketplace"/>
+            <applicationPage customPage="custompage_TRXPesanan" token="pesanan"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="marketplace">
+                <displayName>Marketplace</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="pesanan">
+                <displayName>Pesanan</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

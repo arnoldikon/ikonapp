@@ -1,0 +1,80 @@
+{
+  "id" : "customClickCard",
+  "name" : "clickCard",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1708920578221,
+  "template" : "@customClickCard.tpl.html",
+  "controller" : "@customClickCard.ctrl.js",
+  "properties" : [
+    {
+      "label" : "List Item",
+      "name" : "listItem",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Key",
+      "name" : "keys",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Selected",
+      "name" : "selected",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Limit",
+      "name" : "limit",
+      "type" : "integer",
+      "defaultValue" : 15,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Close modal on success",
+      "name" : "closeOnSuccess",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Open Modal",
+      "name" : "openModal",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Modal Id",
+      "name" : "modalId",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "View mode",
+      "name" : "mode",
+      "type" : "choice",
+      "defaultValue" : "card",
+      "choiceValues" : [
+        "card",
+        "list"
+      ],
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "f1b7a8cb-693b-448e-96f2-d15fc946b2f9",
+      "name" : "clickCard.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

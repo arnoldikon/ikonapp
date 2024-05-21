@@ -1,0 +1,23 @@
+.btn-circle{
+  position: fixed;
+  text-align: center;
+  display: table;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+}
+
+/* HOVER */
+.btn-circle:hover {
+  transform: scale(1.2);
+}
+
+.btn-circle span{
+    vertical-align: middle;
+    display: table-cell;
+}

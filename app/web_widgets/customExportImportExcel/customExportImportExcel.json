@@ -1,0 +1,174 @@
+{
+  "id" : "customExportImportExcel",
+  "name" : "exportImportExcel",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "1.10.12",
+  "lastUpdate" : 1709806826689,
+  "template" : "@customExportImportExcel.tpl.html",
+  "controller" : "@customExportImportExcel.ctrl.js",
+  "properties" : [
+    {
+      "label" : "showImport",
+      "name" : "showImport",
+      "type" : "boolean",
+      "bond" : "expression"
+    },
+    {
+      "label" : "labelImported",
+      "name" : "labelImported",
+      "type" : "text",
+      "defaultValue" : "Import a CSV or Excel file",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "fileNameImported",
+      "name" : "fileNameImported",
+      "help" : "Give back the name of the file imported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "headerImported",
+      "name" : "headerImported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "valueImported",
+      "name" : "valueImported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "statusImport",
+      "name" : "statusImport",
+      "help" : "Status of import",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "error Import",
+      "name" : "errorImport",
+      "help" : "Fullfill if an error arrive",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "showExport",
+      "name" : "showExport",
+      "type" : "boolean",
+      "defaultValue" : true,
+      "bond" : "constant"
+    },
+    {
+      "label" : "labelExported",
+      "name" : "labelExported",
+      "help" : "",
+      "type" : "text",
+      "defaultValue" : "Export",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Control Export",
+      "name" : "controlExport",
+      "help" : "Describe what is to be exported",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "dataExport",
+      "name" : "dataExport",
+      "help" : "Data to export (JSON format)",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "File Name Exported",
+      "name" : "fileNameExported",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Position",
+      "name" : "position",
+      "type" : "choice",
+      "defaultValue" : "left",
+      "choiceValues" : [
+        "left",
+        "middle",
+        "right"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "bcdba6c7-cdb7-46e5-b9fb-226b756d0497",
+      "name" : "xlsx.js",
+      "type" : "js",
+      "order" : 6,
+      "external" : false
+    },
+    {
+      "id" : "288ca89c-1949-4765-bdc6-69ab0522369b",
+      "name" : "xlsx.core.min.js",
+      "type" : "js",
+      "order" : 10,
+      "external" : false
+    },
+    {
+      "id" : "46f795ec-6d19-48b5-a3a8-16ff68e4e990",
+      "name" : "docexcel.gif",
+      "type" : "img",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "1dc61d6c-7dcc-4919-ad7f-440df41ea649",
+      "name" : "xlsx.full.min.js",
+      "type" : "js",
+      "order" : 4,
+      "external" : false
+    },
+    {
+      "id" : "73b6b23f-1c21-4a53-9573-a8dae4df564d",
+      "name" : "xlsx.min.js",
+      "type" : "js",
+      "order" : 8,
+      "external" : false
+    },
+    {
+      "id" : "7bb74554-b3e2-4f7f-aed9-ccf93c159fdd",
+      "name" : "ng-upload-0.5.19-patched.min.js",
+      "type" : "js",
+      "order" : 14,
+      "external" : false
+    },
+    {
+      "id" : "890855e2-f8b7-46a1-8f5e-c301d594ba0e",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 15,
+      "external" : false
+    },
+    {
+      "id" : "0439dfca-7b2c-4ad7-8747-172f3f9a7f18",
+      "name" : "cpexcel.js",
+      "type" : "js",
+      "order" : 13,
+      "external" : false
+    },
+    {
+      "id" : "d2b26512-5b1c-4781-9449-2aeb813aab05",
+      "name" : "alasql.min.js",
+      "type" : "js",
+      "order" : 3,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

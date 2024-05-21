@@ -1,0 +1,28 @@
+{
+  "id" : "customGridActionButton",
+  "name" : "gridActionButton",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1708920578237,
+  "template" : "@customGridActionButton.tpl.html",
+  "controller" : "@customGridActionButton.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Edit URL",
+      "name" : "editUrl",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Remove URL",
+      "name" : "removeUrl",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

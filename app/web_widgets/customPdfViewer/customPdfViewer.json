@@ -1,0 +1,39 @@
+{
+  "id" : "customPdfViewer",
+  "name" : "pdfViewer",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "1.2.9",
+  "lastUpdate" : 1708920578253,
+  "description" : "Widget that displays a PDF from a Bonita document",
+  "template" : "@customPdfViewer.tpl.html",
+  "controller" : "@customPdfViewer.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Document contentStorageId",
+      "name" : "contentStorageId",
+      "type" : "text",
+      "defaultValue" : "context.myPDF_ref.contentStorageId",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Application Name",
+      "name" : "appName",
+      "type" : "text",
+      "defaultValue" : "bonita",
+      "bond" : "constant"
+    },
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "text",
+      "defaultValue" : "{'width':'100%', 'height':'500px'}",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

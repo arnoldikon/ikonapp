@@ -1,0 +1,10 @@
+<div class="container-menu">
+        <a href="/bonita/apps/{{menuItem.token}}/" class="menu-item" ng-repeat="menuItem in properties.listMenu" target="_top">
+            <div class="menu-icon"><img src={{menuItem.icon}} width="40px">
+            <!--    
+                <i class="fas fa-{{menuItem.icon}} fa-2x"></i>
+            -->
+            </div>
+            <div><font size=1 color="#000">{{menuItem.displayName | limitTo : 15}}</font></div>
+        </a>
+</div>

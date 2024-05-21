@@ -1,0 +1,53 @@
+{
+  "id" : "customTableCheckbox",
+  "name" : "tableCheckbox",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1711008667559,
+  "template" : "@customTableCheckbox.tpl.html",
+  "controller" : "@customTableCheckbox.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Headers",
+      "name" : "headers",
+      "type" : "collection",
+      "defaultValue" : [
+        "Id",
+        "Name",
+        "Description",
+        "Date"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Content",
+      "name" : "content",
+      "type" : "text",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Columns key",
+      "name" : "columnsKey",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Selected Rows",
+      "name" : "selectedRows",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Interpret HTML",
+      "name" : "allowHTML",
+      "type" : "boolean",
+      "defaultValue" : false,
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

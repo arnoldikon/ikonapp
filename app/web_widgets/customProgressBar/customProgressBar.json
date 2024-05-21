@@ -1,0 +1,57 @@
+{
+  "id" : "customProgressBar",
+  "name" : "progressBar",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.2",
+  "lastUpdate" : 1709882468050,
+  "description" : "Progress Bar Dynamic",
+  "template" : "@customProgressBar.tpl.html",
+  "controller" : "@customProgressBar.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "primary",
+      "choiceValues" : [
+        "primary",
+        "success",
+        "info",
+        "warning",
+        "danger"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Measure",
+      "name" : "measure",
+      "type" : "choice",
+      "defaultValue" : "%",
+      "choiceValues" : [
+        "records",
+        "%"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Max",
+      "name" : "max",
+      "type" : "integer",
+      "defaultValue" : 100,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "integer",
+      "defaultValue" : 75,
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

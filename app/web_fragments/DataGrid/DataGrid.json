@@ -1,0 +1,1037 @@
+{
+  "id" : "DataGrid",
+  "name" : "DataGrid",
+  "type" : "fragment",
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1709004066683,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "b45ef412-eca4-4801-a9cf-64a76e1ecdbc",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 6,
+                "sm" : 6,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "hidden-xs"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "17eac3a1-7edf-4d0b-af49-5874a99576af",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "tableProperties.hiddenRegister || !tableProperties.process"
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : true
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<i class=\"fas fa-plus\"></i> Tambah"
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "URL"
+                      },
+                      "targetUrl" : {
+                        "type" : "expression",
+                        "value" : "tableProperties.process"
+                      },
+                      "pageToken" : {
+                        "type" : "constant"
+                      },
+                      "processName" : {
+                        "type" : "expression",
+                        "value" : "process[0].name"
+                      },
+                      "processVersion" : {
+                        "type" : "expression",
+                        "value" : "process[0].version"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "caseId" : {
+                        "type" : "constant"
+                      },
+                      "target" : {
+                        "type" : "constant",
+                        "value" : "_self"
+                      },
+                      "appToken" : {
+                        "type" : "constant",
+                        "value" : "busLoc"
+                      },
+                      "urlParams" : {
+                        "type" : "expression",
+                        "value" : "urlParam"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "primary"
+                      }
+                    },
+                    "reference" : "9b71116f-9224-49e6-81b8-4bd6d2330023",
+                    "hasValidationError" : false,
+                    "id" : "pbLink"
+                  }
+                ]
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 6,
+                "sm" : 6,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "hidden-xs"
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "listLabel" : {
+                  "type" : "constant",
+                  "value" : [
+                    "25",
+                    "50",
+                    "200"
+                  ]
+                },
+                "onClick" : {
+                  "type" : "variable",
+                  "value" : "pagination.c"
+                },
+                "align" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "style" : {
+                  "type" : "constant",
+                  "value" : "default"
+                },
+                "active" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "listValue" : {
+                  "type" : "expression",
+                  "value" : "[25, 50, 200]"
+                }
+              },
+              "reference" : "088eff37-9260-46ff-aeda-7d7250fd9611",
+              "hasValidationError" : false,
+              "id" : "customButtonGroupValue"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : "visible-xs"
+                },
+                "hidden" : {
+                  "type" : "expression",
+                  "value" : "tableProperties.hiddenRegister || process.length==0 || selected"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "<span><i class=\"fas fa-plus\"></i></span>"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "URL"
+                },
+                "targetUrl" : {
+                  "type" : "expression",
+                  "value" : "tableProperties.process"
+                },
+                "pageToken" : {
+                  "type" : "constant"
+                },
+                "processName" : {
+                  "type" : "expression",
+                  "value" : "registerProcess[0].name"
+                },
+                "processVersion" : {
+                  "type" : "expression",
+                  "value" : "registerProcess[0].version"
+                },
+                "taskId" : {
+                  "type" : "constant"
+                },
+                "caseId" : {
+                  "type" : "constant"
+                },
+                "target" : {
+                  "type" : "constant",
+                  "value" : "_self"
+                },
+                "appToken" : {
+                  "type" : "constant"
+                },
+                "urlParams" : {
+                  "type" : "expression",
+                  "value" : "urlParam"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "right"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                }
+              },
+              "reference" : "1f11cb3f-0625-43e2-9c70-8f3a837ad12b",
+              "hasValidationError" : false,
+              "id" : "customLinkCircle"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "totalData[0]==0 || (selected && tableProperties.hiddenSelected)"
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "20236746-0015-4d09-a687-3f5b568e64d6",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "6c216e90-3098-4db4-914c-9609b768cad2",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "visible-xs"
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "tableProperties.hiddenView"
+                      },
+                      "listLabel" : {
+                        "type" : "expression",
+                        "value" : "listView.label"
+                      },
+                      "onClick" : {
+                        "type" : "variable",
+                        "value" : "pagination.view"
+                      },
+                      "align" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      },
+                      "style" : {
+                        "type" : "constant",
+                        "value" : "default"
+                      },
+                      "active" : {
+                        "type" : "constant",
+                        "value" : "primary"
+                      },
+                      "listValue" : {
+                        "type" : "expression",
+                        "value" : "listView.value"
+                      }
+                    },
+                    "reference" : "0e875a3c-ac9a-4268-8978-8fcb21565a6f",
+                    "hasValidationError" : false,
+                    "id" : "customButtonGroupValue"
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : "hidden-xs"
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "allowHTML" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : ""
+                      },
+                      "level" : {
+                        "type" : "constant",
+                        "value" : "Level 2"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "left"
+                      }
+                    },
+                    "reference" : "4961d422-0ea9-484b-8bd9-8249d19f4b17",
+                    "hasValidationError" : false,
+                    "id" : "pbTitle"
+                  }
+                ],
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "expression",
+                        "value" : "tableProperties.pagination.view!=\"table\""
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "61850c05-1c15-4f98-a0e4-6c596e4faad6",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.tableMode!=\"API\""
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "headers" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.headers"
+                            },
+                            "type" : {
+                              "type" : "constant",
+                              "value" : "Bonita API"
+                            },
+                            "apiUrl" : {
+                              "type" : "expression",
+                              "value" : "'../API/bdm/businessData/'+tableProperties.bdm+'?q='+tableProperties.query"
+                            },
+                            "params" : {
+                              "type" : "constant"
+                            },
+                            "content" : {
+                              "type" : "constant"
+                            },
+                            "columnsKey" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.columnKeys"
+                            },
+                            "sortColumns" : {
+                              "type" : "constant"
+                            },
+                            "selectedRow" : {
+                              "type" : "variable",
+                              "value" : "selected"
+                            },
+                            "pageSize" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.pagination.c"
+                            },
+                            "filter" : {
+                              "type" : "constant"
+                            },
+                            "striped" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.zebrastrip"
+                            },
+                            "condensed" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.condensed"
+                            },
+                            "bordered" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.bordered"
+                            },
+                            "modalId" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.modalId"
+                            },
+                            "closeOnSuccess" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "b44c5edb-a7c4-48df-b894-25823fc65989",
+                          "hasValidationError" : false,
+                          "id" : "customDataTableModal"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.tableMode!=\"variable\" || tableData.length==0"
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "headers" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.headers"
+                            },
+                            "type" : {
+                              "type" : "constant",
+                              "value" : "Variable"
+                            },
+                            "apiUrl" : {
+                              "type" : "constant",
+                              "value" : "../API/"
+                            },
+                            "params" : {
+                              "type" : "constant"
+                            },
+                            "content" : {
+                              "type" : "expression",
+                              "value" : "tableData | filter : tableProperties.pagination.s"
+                            },
+                            "columnsKey" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.columnKeys"
+                            },
+                            "sortColumns" : {
+                              "type" : "constant"
+                            },
+                            "selectedRow" : {
+                              "type" : "variable",
+                              "value" : "selected"
+                            },
+                            "pageSize" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.pagination.c"
+                            },
+                            "filter" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.filter"
+                            },
+                            "striped" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.zebrastrip"
+                            },
+                            "condensed" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.condensed"
+                            },
+                            "bordered" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.bordered"
+                            },
+                            "modalId" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.modalId"
+                            },
+                            "closeOnSuccess" : {
+                              "type" : "constant",
+                              "value" : false
+                            }
+                          },
+                          "reference" : "a2120679-53fe-4542-8a3f-e91d683bbe05",
+                          "hasValidationError" : false,
+                          "id" : "customDataTableModal",
+                          "description" : "Table query by content"
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "container",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "repeatedCollection" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "5a378398-60f5-4094-b652-2142650ff867",
+              "hasValidationError" : false,
+              "id" : "pbContainer",
+              "rows" : [
+                [
+                  {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "repeatedCollection" : {
+                        "type" : "variable"
+                      }
+                    },
+                    "reference" : "ed8f7242-6f93-41cf-9cca-4c2c7068ca92",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "title" : {
+                              "type" : "constant",
+                              "value" : "Title"
+                            },
+                            "subTitle" : {
+                              "type" : "interpolation",
+                              "value" : "<font color='grey'>({{$item.code}}) {{$item.isOwner ? '<font color=\"gold\"><i class=\"fas fa-certificate\"></i></font>' : '<font color=\"slategray\"><i class=\"fas fa-handshake\"></i></font>' }}</font><br>{{$item.status==1 ? '<span class=\"badge badge-success\"><font size=1>Active</font></span>' : '<span class=\"badge badge-danger\"><font size=1>InActive</font></span>'}}"
+                            },
+                            "description" : {
+                              "type" : "interpolation",
+                              "value" : ""
+                            },
+                            "content" : {
+                              "type" : "expression"
+                            },
+                            "selected" : {
+                              "type" : "variable",
+                              "value" : "selected"
+                            },
+                            "imageUrl" : {
+                              "type" : "interpolation",
+                              "value" : "{{$item.locPic ? '/bonita/API/formsDocumentImage?document='+$item.locPic : 'assets/img/building.png'}}"
+                            },
+                            "limit" : {
+                              "type" : "constant",
+                              "value" : 25
+                            },
+                            "closeOnSuccess" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "openModal" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "modalId" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.modalId"
+                            },
+                            "item" : {
+                              "type" : "expression",
+                              "value" : "$item"
+                            },
+                            "mode" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.pagination.view"
+                            },
+                            "listItem" : {
+                              "type" : "expression",
+                              "value" : "tableData | filter : tableProperties.pagination.s | filter : tableProperties.filter"
+                            },
+                            "keys" : {
+                              "type" : "expression",
+                              "value" : "tableProperties.pagination.view==\"card\" ? tableProperties.cardKeys : tableProperties.listKeys"
+                            }
+                          },
+                          "reference" : "9472abf6-736d-43bb-ad5b-d79c2f9122d9",
+                          "hasValidationError" : false,
+                          "id" : "customClickCard"
+                        }
+                      ]
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "style" : {
+                        "type" : "constant",
+                        "value" : "primary"
+                      },
+                      "totalData" : {
+                        "type" : "expression",
+                        "value" : "totalData[0]"
+                      },
+                      "record" : {
+                        "type" : "variable",
+                        "value" : "tableProperties.pagination"
+                      },
+                      "align" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      }
+                    },
+                    "reference" : "dbea8df7-9bc1-4cf7-a037-fb58c89bc1f1",
+                    "hasValidationError" : false,
+                    "id" : "customPrevNextButton"
+                  }
+                ]
+              ]
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "f22f11bb-e037-43aa-a167-fbfb5f8479d0",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "text-info"
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "totalData[0]>0"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<i class=\"fas fa-info-circle\"> </i> Data tidak ditemukan"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          }
+        },
+        "reference" : "f88ba937-3349-4e9a-874b-1f03b1c9d65b",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ]
+  ],
+  "variables" : {
+    "tableProperties" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "selected" : {
+      "type" : "constant",
+      "value" : [
+        ""
+      ],
+      "exposed" : true
+    },
+    "tableData" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/{{apiData}}"
+      ],
+      "exposed" : false
+    },
+    "totalData" : {
+      "type" : "url",
+      "value" : [
+        "../API/bdm/businessData/{{tableProperties.bdm}}?q={{tableProperties.queryTotal}}&p=0&c=1"
+      ],
+      "exposed" : false
+    },
+    "watcher" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.deviceLength<768 && $data.pagination.view==\"table\"){",
+        "    $data.pagination.view=\"list\";",
+        "}",
+        "",
+        "$data.apiData = $data.loadData();",
+        "",
+        "if(!$data.apiData){$data.tableData=[]}",
+        "",
+        "if($data.tableProperties.pagination.view != $data.pagination.view || $data.tableProperties.pagination.c != $data.pagination.c){",
+        "    $data.newPagination($data.pagination);",
+        "}",
+        "",
+        "$data.tableProperties.pagination.totalRow = ($data.tableProperties.pagination.p+1)*$data.tableProperties.pagination.c;",
+        "if($data.tableProperties.pagination.totalRow > $data.totalData[0]){",
+        "    $data.tableProperties.pagination.totalRow = $data.totalData[0];",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "newPagination" : {
+      "type" : "expression",
+      "value" : [
+        "return function(pagination){",
+        "    ",
+        "    $data.pagination.p = 0;",
+        "    $data.pagination.s = \"\";",
+        "    ",
+        "    $data.tableProperties.pagination.p = pagination.p;",
+        "    $data.tableProperties.pagination.c = pagination.c;",
+        "    $data.tableProperties.pagination.view = pagination.view;",
+        "    $data.tableProperties.pagination.s = \"\";",
+        "    ",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "view" : {
+      "type" : "constant",
+      "value" : [
+        "table"
+      ],
+      "exposed" : false
+    },
+    "pagination" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"p\":0,",
+        "    \"c\":25,",
+        "    \"view\":\"table\",",
+        "    \"s\":\"\",",
+        "    \"totalRow\":0",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "loadData" : {
+      "type" : "expression",
+      "value" : [
+        "return function(){",
+        "",
+        "var api = \"\",",
+        "    prefix = $data.tableProperties.bdm+\"?p=\"+$data.tableProperties.pagination.p;",
+        "",
+        "if($data.tableProperties.pagination.view == \"card\" || $data.tableProperties.pagination.view == \"list\"){",
+        "    api = prefix+\"&q=\"+$data.tableProperties.query+\"&c=\"+$data.tableProperties.pagination.c;",
+        "}",
+        "else if($data.tableProperties.pagination.view == \"table\" && $data.tableProperties.tableMode == \"variable\"){",
+        "    api = prefix+\"&q=\"+$data.tableProperties.query+\"&c=\"+$data.totalData[0];",
+        "}",
+        "",
+        "return api;",
+        "",
+        "};"
+      ],
+      "exposed" : false
+    },
+    "apiData" : {
+      "type" : "constant",
+      "exposed" : false
+    },
+    "listView" : {
+      "type" : "expression",
+      "value" : [
+        "var listVw={};",
+        "",
+        "if(window.innerWidth<768){",
+        "    listVw={label:[",
+        "        '<i class=\"fas fa-th-large\"></i>',",
+        "        '<i class=\"fas fa-list\"></i>'",
+        "        ],",
+        "        value:[\"card\",\"list\"]",
+        "    };",
+        "}",
+        "else{",
+        "    listVw={label:[",
+        "        '<i class=\"fas fa-th-large\"></i>',",
+        "        '<i class=\"fas fa-list\"></i>',",
+        "        '<i class=\"fas fa-table\"></i>'",
+        "        ],",
+        "        value:[\"card\",\"list\",\"table\"]",
+        "    };",
+        "}",
+        "    ",
+        "return listVw;"
+      ],
+      "exposed" : false
+    },
+    "deviceLength" : {
+      "type" : "expression",
+      "value" : [
+        "return window.innerWidth;"
+      ],
+      "exposed" : false
+    }
+  },
+  "assets" : [ ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "customProcessStep",
+  "name" : "processStep",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1709892897107,
+  "template" : "@customProcessStep.tpl.html",
+  "controller" : "@customProcessStep.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Content",
+      "name" : "content",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Current Step",
+      "name" : "currentStep",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "0245e1f7-825d-4fc7-a2f3-5f00840e9b99",
+      "name" : "processStep.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

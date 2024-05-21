@@ -1,0 +1,31 @@
+{
+  "id" : "customMobileMenu",
+  "name" : "mobileMenu",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1709521503341,
+  "template" : "@customMobileMenu.tpl.html",
+  "controller" : "@customMobileMenu.ctrl.js",
+  "properties" : [
+    {
+      "label" : "List menu",
+      "name" : "listMenu",
+      "type" : "collection",
+      "defaultValue" : [ ],
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "3c541c9f-7301-470c-b367-2ef0ca36c8ff",
+      "name" : "menu.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

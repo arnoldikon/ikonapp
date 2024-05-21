@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="8.0.0">
+    <businessObjects>
+        <businessObject qualifiedName="id.ikon.audit.LogActivity">
+            <fields>
+                <field type="LOCALDATETIME" length="255" name="logTime" nullable="true" collection="false"/>
+                <field type="STRING" length="500" name="logNote" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="username" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fullname" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="activity" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="refId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.conf.Application">
+            <fields>
+                <field type="INTEGER" length="255" name="appId" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="groupId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.conf.Email">
+            <fields>
+                <field type="STRING" length="255" name="smtpHost" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="smtpPort" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="username" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="password" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.fasilitas.Pinjam">
+            <fields>
+                <field type="STRING" length="255" name="noAkun" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="idAnggota" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="plafon" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="jangkaWaktu" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="bunga" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="saldoTerpakai" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="saldoCadangan" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="overlimit" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Pinjam">
+                    <fieldNames>
+                        <fieldName>noAkun</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries>
+                <query name="sumLimitPinjamByIdAnggota" content="SELECT SUM(p.plafon) &#13;&#10;FROM Pinjam p &#13;&#10;WHERE p.idAnggota = :idAnggota&#13;&#10;" returnType="java.lang.Double">
+                    <queryParameters>
+                        <queryParameter name="idAnggota" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="sumSaldoTerpakaiByIdAnggota" content="SELECT SUM(p.saldoTerpakai) &#13;&#10;FROM Pinjam p &#13;&#10;WHERE p.idAnggota = :idAnggota" returnType="java.lang.Double">
+                    <queryParameters>
+                        <queryParameter name="idAnggota" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="sumSaldoCadanganByIdAnggota" content="SELECT SUM(p.saldoCadangan) &#13;&#10;FROM Pinjam p &#13;&#10;WHERE p.idAnggota = :idAnggota&#13;&#10;" returnType="java.lang.Double">
+                    <queryParameters>
+                        <queryParameter name="idAnggota" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="sumOverlimitByIdAnggota" content="SELECT SUM(p.overlimit) &#13;&#10;FROM Pinjam p &#13;&#10;WHERE p.idAnggota = :idAnggota&#13;&#10;" returnType="java.lang.Double">
+                    <queryParameters>
+                        <queryParameter name="idAnggota" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.fasilitas.Simpan">
+            <fields>
+                <field type="STRING" length="255" name="noAkun" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="idAnggota" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="saldo" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Simpan">
+                    <fieldNames>
+                        <fieldName>noAkun</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.general.Entitas">
+            <fields>
+                <field type="STRING" length="255" name="namaEntitas" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="jenis" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="noLegal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="bidangUsaha" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.general.Kontak">
+            <fields>
+                <field type="STRING" length="255" name="alamat1" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="alamat2" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="kecamatan" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="kota" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="provinsi" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="kodepos" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="noTlp" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="noHp" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="noFax" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="email" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="website" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.general.Personal">
+            <fields>
+                <field type="STRING" length="255" name="namaLengkap" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="tempatLahir" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglLahir" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="jenisKelamin" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="statusPernikahan" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="noKTP" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="jabatan" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="fotoProfil" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="fotoKtp" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglMulaiKerja" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.keanggotaan.Anggota">
+            <fields>
+                <field type="INTEGER" length="255" name="id" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="entitasId" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipe" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="id.ikon.general.Personal" fetchType="EAGER" name="personal" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="id.ikon.general.Kontak" fetchType="LAZY" name="kontak" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="id.ikon.general.Entitas" fetchType="EAGER" name="entitas" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isAktif" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Anggota">
+                    <fieldNames>
+                        <fieldName>id</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries>
+                <query name="findLastId" content="SELECT a &#13;&#10;FROM Anggota a &#13;&#10;WHERE a.tipe = :tipe&#13;&#10;ORDER BY a.id DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="tipe" className="java.lang.String"/>
+                    </queryParameters>
+                </query>
+                <query name="findByTipeAndIsAktif" content="SELECT a &#13;&#10;FROM Anggota a &#13;&#10;WHERE a.tipe = :tipe&#13;&#10;AND a.isAktif = :isAktif&#13;&#10;ORDER BY a.persistenceId ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="tipe" className="java.lang.String"/>
+                        <queryParameter name="isAktif" className="java.lang.Boolean"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.marketplace.Produk">
+            <fields>
+                <field type="STRING" length="255" name="kategori" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="image" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="namaBarang" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="harga" nullable="true" collection="false"/>
+                <field type="STRING" length="1000" name="imgUrl" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findByAvailableHarga" content="SELECT p&#13;&#10;FROM Produk p&#13;&#10;WHERE p.harga &lt;= :harga&#13;&#10;ORDER BY p.persistenceId ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="harga" className="java.lang.Double"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.transaksi.Angsuran">
+            <fields>
+                <field type="STRING" length="255" name="noAkun" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="angsuranKe" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglJatem" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglTagih" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="pokok" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="bunga" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="angsuran" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglLunas" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="totalBayar" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findByNoAkunAndStatus" content="SELECT a &#13;&#10;FROM Angsuran a &#13;&#10;WHERE a.noAkun = :noAkun&#13;&#10;AND a.status = :status&#13;&#10;ORDER BY a.persistenceId ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="noAkun" className="java.lang.String"/>
+                        <queryParameter name="status" className="java.lang.String"/>
+                    </queryParameters>
+                </query>
+                <query name="countForFindByNoAkunAndStatus" content="SELECT COUNT(a)&#13;&#10;FROM Angsuran a &#13;&#10;WHERE a.noAkun = :noAkun&#13;&#10;AND a.status = :status" returnType="java.lang.Long">
+                    <queryParameters>
+                        <queryParameter name="noAkun" className="java.lang.String"/>
+                        <queryParameter name="status" className="java.lang.String"/>
+                    </queryParameters>
+                </query>
+                <query name="sumTagihanByNoAkunAndStatus" content="SELECT SUM(a.pokok)+SUM(a.bunga)-SUM(a.totalBayar)&#13;&#10;FROM Angsuran a &#13;&#10;WHERE a.noAkun = :noAkun&#13;&#10;AND a.status = :status" returnType="java.lang.Double">
+                    <queryParameters>
+                        <queryParameter name="noAkun" className="java.lang.String"/>
+                        <queryParameter name="status" className="java.lang.String"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.transaksi.DetailFaktur">
+            <fields>
+                <relationField type="AGGREGATION" reference="id.ikon.marketplace.Produk" fetchType="LAZY" name="produk" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="jumlah" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="total" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="harga" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.transaksi.DetailPesanan">
+            <fields>
+                <relationField type="AGGREGATION" reference="id.ikon.marketplace.Produk" fetchType="EAGER" name="produk" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="jumlah" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="total" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.transaksi.Faktur">
+            <fields>
+                <field type="STRING" length="255" name="idFaktur" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="jenis" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="idOrder" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="id.ikon.transaksi.DetailFaktur" fetchType="LAZY" name="listBarang" nullable="true" collection="true"/>
+                <field type="LOCALDATE" length="255" name="tglTagih" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglJatem" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="totalTagih" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="totalBayar" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglLunas" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="status" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.transaksi.Pesanan">
+            <fields>
+                <field type="STRING" length="255" name="idOrder" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="tglPesan" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglPersetujuan" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglKonfirmasi" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglKirim" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="tglTerima" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="idAnggota" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="entitasId" nullable="true" collection="false"/>
+                <relationField type="COMPOSITION" reference="id.ikon.transaksi.DetailPesanan" fetchType="LAZY" name="listBarang" nullable="true" collection="true"/>
+                <field type="STRING" length="255" name="statusPesanan" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="pemesan" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="persetujuan" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="caseId" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="isFinal" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="PK_Pesanan">
+                    <fieldNames>
+                        <fieldName>idOrder</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries>
+                <query name="findByIdAnggotaAndIsFinal" content="SELECT p &#13;&#10;FROM Pesanan p &#13;&#10;WHERE p.idAnggota = :idAnggota&#13;&#10;AND p.isFinal = :isFinal&#13;&#10;ORDER BY p.persistenceId ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="idAnggota" className="java.lang.Integer"/>
+                        <queryParameter name="isFinal" className="java.lang.Boolean"/>
+                    </queryParameters>
+                </query>
+                <query name="countForFindByIdAnggotaAndIsFinal" content="SELECT COUNT(p )&#13;&#10;FROM Pesanan p &#13;&#10;WHERE p.idAnggota = :idAnggota&#13;&#10;AND p.isFinal = :isFinal" returnType="java.lang.Long">
+                    <queryParameters>
+                        <queryParameter name="idAnggota" className="java.lang.Integer"/>
+                        <queryParameter name="isFinal" className="java.lang.Boolean"/>
+                    </queryParameters>
+                </query>
+                <query name="findByEntitasIdAndIsFinal" content="SELECT p &#13;&#10;FROM Pesanan p &#13;&#10;WHERE p.entitasId = :entitasId&#13;&#10;AND p.isFinal = :isFinal&#13;&#10;ORDER BY p.persistenceId ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="entitasId" className="java.lang.Integer"/>
+                        <queryParameter name="isFinal" className="java.lang.Boolean"/>
+                    </queryParameters>
+                </query>
+                <query name="countForFindByEntitasIdAndIsFinal" content="SELECT COUNT(p )&#13;&#10;FROM Pesanan p &#13;&#10;WHERE p.entitasId = :entitasId&#13;&#10;AND p.isFinal = :isFinal" returnType="java.lang.Long">
+                    <queryParameters>
+                        <queryParameter name="entitasId" className="java.lang.Integer"/>
+                        <queryParameter name="isFinal" className="java.lang.Boolean"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="id.ikon.transaksi.Transaksi">
+            <fields>
+                <field type="STRING" length="255" name="noAkun" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="namaTrx" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="tglTrx" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nominal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="keterangan" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="referensi" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

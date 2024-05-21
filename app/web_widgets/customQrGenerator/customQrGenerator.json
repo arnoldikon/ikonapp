@@ -1,0 +1,61 @@
+{
+  "id" : "customQrGenerator",
+  "name" : "qrGenerator",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "1.7.69",
+  "lastUpdate" : 1709268612499,
+  "template" : "@customQrGenerator.tpl.html",
+  "controller" : "@customQrGenerator.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Size",
+      "name" : "size",
+      "type" : "integer",
+      "defaultValue" : 200,
+      "bond" : "expression"
+    },
+    {
+      "label" : "Level",
+      "name" : "level",
+      "type" : "choice",
+      "defaultValue" : "Medium",
+      "choiceValues" : [
+        "Low",
+        "Medium",
+        "Quartile",
+        "High"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Data",
+      "name" : "data",
+      "type" : "text",
+      "defaultValue" : "sample",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "99e7cc4f-0677-46c9-8b7f-d9beaa560e43",
+      "name" : "angular-qrcode.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "e7669906-ae0f-4d05-9f28-68ecaaaedcbc",
+      "name" : "qrcode.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [
+    "monospaced.qrcode"
+  ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

@@ -1,0 +1,26 @@
+.navbar-logo {
+    max-width: 200%;
+    font-size: 2em;
+}
+
+.navbar-brand {
+    max-width: 70%;
+    padding-right: 0px;
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.max-title-width {
+    display: block;
+    max-width: 70%;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-account {
+    text-align: left;
+}

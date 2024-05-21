@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="keanggotaan" version="1.0" profile="User" homePage="anggota" state="ACTIVATED" layout="custompage_KubikLayoutV2" theme="custompage_themeBonita">
+        <displayName>Keanggotaan</displayName>
+        <description>Pengelolaan data keanggotaan koperasi untuk lembaga maupun personal.</description>
+        <applicationPages>
+            <applicationPage customPage="custompage_KADataAnggota" token="anggota"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="anggota">
+                <displayName>Data Anggota</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

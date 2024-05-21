@@ -1,0 +1,59 @@
+{
+  "id" : "customQrScanner",
+  "name" : "qrScanner",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "2.2",
+  "lastUpdate" : 1709865712019,
+  "template" : "@customQrScanner.tpl.html",
+  "controller" : "@customQrScanner.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Value",
+      "name" : "value",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "Button Label",
+      "name" : "buttonLabel",
+      "type" : "text",
+      "defaultValue" : "Open",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "primary",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "info",
+        "warning",
+        "danger",
+        "success"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Modal Id",
+      "name" : "modalId",
+      "type" : "text",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "bd14190f-d582-467f-be4b-0f847eabae22",
+      "name" : "jsQR.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

@@ -1,0 +1,29 @@
+<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>
+
+<div class="table-responsive">
+        <table bonitable
+           sort-options="ctrl.sortOptions"
+           on-sort="ctrl.sortHandler()"
+           class="table" ng-class="{'table-hover': ctrl.isSelectable(),'table-striped': properties.striped, 'table-condensed': properties.condensed, 'table-bordered': properties.bordered}">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" ng-model="selectAll" ng-click="toggleSelectAll()"></th>
+                    <th ng-repeat="header in properties.headers">
+                        <span ng-if="properties.allowHTML" ng-bind-html="header | uiTranslate"></span>
+                  		 <span ng-if="!properties.allowHTML">{{ header | uiTranslate }}</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items track by $index">
+                    <td><input type="checkbox" ng-model="item.selected" ng-click="toggleSelection(item)" ng-disabled="selectAll"></td>
+                    <td ng-if="properties.allowHTML" ng-repeat="column in properties.columnsKey track by $index">
+                    <div ng-if="properties.allowHTML" ng-bind-html="$eval(column, item) | uiTranslate"></div>
+                    </td>
+                    <td ng-if="!properties.allowHTML" ng-repeat="column in properties.columnsKey track by $index">
+                         {{ $eval(column, item) | uiTranslate }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

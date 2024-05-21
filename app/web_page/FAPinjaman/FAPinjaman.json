@@ -1,0 +1,565 @@
+{
+  "id" : "FAPinjaman",
+  "name" : "FAPinjaman",
+  "displayName" : "Fasilitas Pinjaman",
+  "type" : "page",
+  "uuid" : "a24c5808-7593-48f8-b6e0-01df4cb64fd2",
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1710754141874,
+  "description" : "Fasilitas pinjaman",
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "header" : {
+            "type" : "interpolation",
+            "value" : "Pinjaman Saya"
+          },
+          "subHeader" : {
+            "type" : "interpolation"
+          },
+          "iconClass" : {
+            "type" : "constant",
+            "value" : "fas fa-money-check-alt"
+          },
+          "showReturn" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "returnURL" : {
+            "type" : "constant"
+          },
+          "lineSeparator" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "dd2ef8f3-ad87-464b-8958-c2a1e5ec3fe1",
+        "hasValidationError" : false,
+        "id" : "customHeader"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "d1f06334-5ac1-4928-8710-d3b82bf040d8",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 6,
+                "md" : 4,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "iconClass" : {
+                  "type" : "constant",
+                  "value" : "fa fa-money-bill fa-2x"
+                },
+                "cardStyle" : {
+                  "type" : "constant",
+                  "value" : "6"
+                },
+                "style" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "title" : {
+                  "type" : "constant",
+                  "value" : "Total Limit"
+                },
+                "value" : {
+                  "type" : "interpolation",
+                  "value" : "{{sumLimit[0] | currency:\"Rp \"}}"
+                }
+              },
+              "reference" : "6261eb21-827e-4401-9d70-55658ad41147",
+              "hasValidationError" : false,
+              "id" : "customCardColor"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 6,
+                "md" : 4,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "iconClass" : {
+                  "type" : "constant",
+                  "value" : "fa fa-wallet fa-2x"
+                },
+                "cardStyle" : {
+                  "type" : "constant",
+                  "value" : "6"
+                },
+                "style" : {
+                  "type" : "constant",
+                  "value" : "success"
+                },
+                "title" : {
+                  "type" : "constant",
+                  "value" : "Saldo Tersedia"
+                },
+                "value" : {
+                  "type" : "interpolation",
+                  "value" : "{{saldoTersedia | currency:\"Rp \"}}"
+                }
+              },
+              "reference" : "49e2599e-def1-47e4-ba65-3339e07c97e8",
+              "hasValidationError" : false,
+              "id" : "customCardColor"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 6,
+                "md" : 4,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "iconClass" : {
+                  "type" : "constant",
+                  "value" : "fa fa-wallet fa-2x"
+                },
+                "cardStyle" : {
+                  "type" : "constant",
+                  "value" : "6"
+                },
+                "style" : {
+                  "type" : "constant",
+                  "value" : "warning"
+                },
+                "title" : {
+                  "type" : "constant",
+                  "value" : "Saldo Cadangan"
+                },
+                "value" : {
+                  "type" : "interpolation",
+                  "value" : "{{sumCadangan[0]| currency:\"Rp \"}}"
+                }
+              },
+              "reference" : "1f85a779-ca3b-4b04-8755-f5e8516e656c",
+              "hasValidationError" : false,
+              "id" : "customCardColor"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "style" : {
+            "type" : "constant",
+            "value" : "primary"
+          },
+          "measure" : {
+            "type" : "constant",
+            "value" : "%"
+          },
+          "max" : {
+            "type" : "expression",
+            "value" : "sumLimit[0]"
+          },
+          "value" : {
+            "type" : "expression",
+            "value" : "sumTerpakai[0]"
+          }
+        },
+        "reference" : "30ab660b-a3b4-4664-9a0b-03b04dfae538",
+        "hasValidationError" : false,
+        "id" : "customProgressBar"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 8,
+          "sm" : 6,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Saldo anda terpakai : <br>\n<font size=3><b>{{sumTerpakai[0] | currency : \"Rp \"}}</b>"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "7baf1e84-78a5-4f7b-a2b5-702bab24096f",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 4,
+          "sm" : 6,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "sumTerpakai[0]==0"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "Bayar"
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "process"
+          },
+          "targetUrl" : {
+            "type" : "constant",
+            "value" : "http://"
+          },
+          "pageToken" : {
+            "type" : "constant"
+          },
+          "processName" : {
+            "type" : "constant",
+            "value" : "TRX_Bayar_Angsuran"
+          },
+          "processVersion" : {
+            "type" : "constant",
+            "value" : "1.0"
+          },
+          "taskId" : {
+            "type" : "constant"
+          },
+          "caseId" : {
+            "type" : "constant"
+          },
+          "target" : {
+            "type" : "constant",
+            "value" : "_self"
+          },
+          "appToken" : {
+            "type" : "constant"
+          },
+          "urlParams" : {
+            "type" : "constant"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "right"
+          },
+          "buttonStyle" : {
+            "type" : "constant",
+            "value" : "success"
+          }
+        },
+        "reference" : "f58a894f-390d-4ea3-a71b-d093b07387ec",
+        "hasValidationError" : false,
+        "id" : "pbLink"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "caption" : {
+            "type" : "interpolation"
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "headers" : {
+            "type" : "constant",
+            "value" : [
+              "#",
+              "Tanggal Jatuh Tempo",
+              "Tanggal Tagih",
+              "Angsuran",
+              "Total Bayar"
+            ]
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "Variable"
+          },
+          "apiUrl" : {
+            "type" : "constant",
+            "value" : "../API/"
+          },
+          "params" : {
+            "type" : "constant"
+          },
+          "content" : {
+            "type" : "expression",
+            "value" : "angsuran"
+          },
+          "columnsKey" : {
+            "type" : "constant",
+            "value" : [
+              "angsuranKe",
+              "tglJatem | date : \"dd MMM yyyy\"",
+              "tglTagih | date : \"dd MMM yyyy\"",
+              "angsuran | currency : \"Rp \"",
+              "totalBayar | currency : \"Rp \""
+            ]
+          },
+          "sortColumns" : {
+            "type" : "constant"
+          },
+          "selectedRow" : {
+            "type" : "variable",
+            "value" : ""
+          },
+          "pageSize" : {
+            "type" : "constant",
+            "value" : 12
+          },
+          "filter" : {
+            "type" : "constant"
+          },
+          "striped" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "condensed" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "bordered" : {
+            "type" : "constant",
+            "value" : false
+          }
+        },
+        "reference" : "6d3ca398-ec6c-43b3-9449-dd73bec93301",
+        "hasValidationError" : false,
+        "id" : "pbDataTable"
+      }
+    ]
+  ],
+  "variables" : {
+    "anggota" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findById [id.ikon.keanggotaan.Anggota]\",\"businessObjectName\":\"undefined\",\"query\":{\"name\":\"findById\",\"displayName\":\"findById\"},\"id\":\"id.ikon.keanggotaan.Anggota\",\"filters\":[{\"name\":\"id\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{aid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "aid" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.loggedUser.user_name;"
+      ],
+      "exposed" : false
+    },
+    "debug" : {
+      "type" : "expression",
+      "value" : [
+        "//$data.aid=4000001;"
+      ],
+      "exposed" : false
+    },
+    "sumLimit" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"sumLimitPinjamByIdAnggota [id.ikon.fasilitas.Pinjam]\",\"businessObjectName\":\"Pinjam\",\"query\":{\"name\":\"sumLimitPinjamByIdAnggota\",\"displayName\":\"sumLimitPinjamByIdAnggota\"},\"id\":\"id.ikon.fasilitas.Pinjam\",\"filters\":[{\"name\":\"idAnggota\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{aid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "sumTerpakai" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"sumSaldoTerpakaiByIdAnggota [id.ikon.fasilitas.Pinjam]\",\"businessObjectName\":\"Pinjam\",\"query\":{\"name\":\"sumSaldoTerpakaiByIdAnggota\",\"displayName\":\"sumSaldoTerpakaiByIdAnggota\"},\"id\":\"id.ikon.fasilitas.Pinjam\",\"filters\":[{\"name\":\"idAnggota\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{aid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "saldoTersedia" : {
+      "type" : "expression",
+      "value" : [
+        "var curSaldo = $data.sumLimit[0]-$data.sumTerpakai[0]-$data.sumCadangan[0];",
+        "",
+        "return curSaldo;"
+      ],
+      "exposed" : false
+    },
+    "sumCadangan" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"sumSaldoCadanganByIdAnggota [id.ikon.fasilitas.Pinjam]\",\"businessObjectName\":\"Pinjam\",\"query\":{\"name\":\"sumSaldoCadanganByIdAnggota\",\"displayName\":\"sumSaldoCadanganByIdAnggota\"},\"id\":\"id.ikon.fasilitas.Pinjam\",\"filters\":[{\"name\":\"idAnggota\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{aid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "loggedUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "angsuran" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findByNoAkun [id.ikon.transaksi.Angsuran]\",\"businessObjectName\":\"undefined\",\"query\":{\"name\":\"findByNoAkun\",\"displayName\":\"findByNoAkun\"},\"id\":\"id.ikon.transaksi.Angsuran\",\"filters\":[{\"name\":\"noAkun\",\"type\":\"STRING\",\"collection\":false,\"value\":\"{{pinjaman[0].noAkun}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"100\"}}"
+      ],
+      "exposed" : false
+    },
+    "pinjaman" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findByIdAnggota [id.ikon.fasilitas.Pinjam]\",\"businessObjectName\":\"undefined\",\"query\":{\"name\":\"findByIdAnggota\",\"displayName\":\"findByIdAnggota\"},\"id\":\"id.ikon.fasilitas.Pinjam\",\"filters\":[{\"name\":\"idAnggota\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{anggota[0].id}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    }
+  },
+  "assets" : [
+    {
+      "id" : "cd1798c2-b060-4ee0-a51c-317beff1b8bc",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "dbd5944e-db68-4bfb-a787-efd4d54e2f87",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}

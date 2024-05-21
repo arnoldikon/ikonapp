@@ -1,0 +1,30 @@
+<!-- The custom widget template is defined here
+   - You can use standard HTML tags and AngularJS built-in directives, scope and interpolation system
+   - Custom widget properties defined on the right can be used as variables in a templates with properties.newProperty
+   - Functions exposed in the controller can be used with ctrl.newFunction()
+   - You can use the 'environment' property injected in the scope when inside the Editor whiteboard. It allows to define a mockup
+     of the Custom Widget to be displayed in the whiteboard only. By default the widget is represented by an auto-generated icon
+     and its name (See the <span> below).
+-->
+ 
+<span ng-if="environment"><identicon name="{{environment.component.id}}" size="30" background-color="[255,255,255, 0]" foreground-color="[51,51,51]"></identicon> {{environment.component.name}}</span>
+
+<div class="text-right hidden-xs">
+    <a class="btn btn-danger"
+       ng-href="{{ properties.removeUrl }}" target="_self"><i class=
+       "fas fa-eraser"></i> Remove</a>
+    &nbsp;
+    <a class="btn btn-primary"
+       ng-href="{{ properties.editUrl }}" target="_self"><i class=
+       "fas fa-edit"></i> Edit</a>
+</div>
+
+<div class="text-right visible-xs">
+    <a class="btn btn-danger"
+       ng-href="{{ properties.removeUrl }}" target="_self"><i class=
+       "fas fa-eraser"></i></a>
+    &nbsp;
+    <a class="btn btn-primary"
+       ng-href="{{ properties.editUrl }}" target="_self"><i class=
+       "fas fa-edit"></i></a>
+</div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="Koperasi">
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>EntitasId</name>
+      <description>Id entitas</description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
+  <users>
+    <user userName="ikon">
+      <firstName>IKON</firstName>
+      <lastName>Administrator</lastName>
+      <personalData/>
+      <professionalData>
+        <city>Jakarta</city>
+        <state>Jakarta</state>
+        <country>Indonesia</country>
+        <website>www.ikonsultan.com</website>
+      </professionalData>
+      <password encrypted="false">@Ikon8888</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>EntitasId</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+  </users>
+  <roles>
+    <role name="admin">
+      <displayName>Administrator</displayName>
+    </role>
+    <role name="member">
+      <displayName>Member</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="sa">
+      <displayName>Super Administrator</displayName>
+    </group>
+    <group name="koperasi">
+      <displayName>Koperasi</displayName>
+    </group>
+    <group name="entitas">
+      <displayName>Entitas</displayName>
+    </group>
+    <group name="hrd" parentPath="/entitas">
+      <displayName>HRD</displayName>
+    </group>
+    <group name="karyawan" parentPath="/entitas">
+      <displayName>Karyawan</displayName>
+    </group>
+    <group name="direksi" parentPath="/entitas">
+      <displayName>Direksi</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>ikon</userName>
+      <roleName>admin</roleName>
+      <groupName>sa</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

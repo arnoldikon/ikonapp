@@ -1,0 +1,334 @@
+{
+  "id" : "FASimpanan",
+  "name" : "FASimpanan",
+  "displayName" : "Fasilitas Simpanan",
+  "type" : "page",
+  "uuid" : "edfe7a00-8b3c-4561-b1e9-d3591a5610e2",
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1709268240416,
+  "description" : "Fasilitas simpanan",
+  "rows" : [
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "header" : {
+            "type" : "interpolation",
+            "value" : "Simpanan Saya"
+          },
+          "subHeader" : {
+            "type" : "interpolation"
+          },
+          "iconClass" : {
+            "type" : "constant",
+            "value" : "fas fa-piggy-bank"
+          },
+          "showReturn" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "returnURL" : {
+            "type" : "constant"
+          },
+          "lineSeparator" : {
+            "type" : "constant",
+            "value" : true
+          }
+        },
+        "reference" : "c9847b96-010c-4f42-9130-b00f502b4cc7",
+        "hasValidationError" : false,
+        "id" : "customHeader"
+      }
+    ],
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable"
+          }
+        },
+        "reference" : "d34b02ca-7212-452c-9977-251628574004",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 6,
+                "md" : 4,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "iconClass" : {
+                  "type" : "constant",
+                  "value" : "fa fa-piggy-bank fa-2x"
+                },
+                "cardStyle" : {
+                  "type" : "constant",
+                  "value" : "6"
+                },
+                "style" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "title" : {
+                  "type" : "constant",
+                  "value" : "Saldo"
+                },
+                "value" : {
+                  "type" : "interpolation",
+                  "value" : "{{simpanan[0].saldo | currency:\"Rp \"}}"
+                }
+              },
+              "reference" : "f5b07364-629b-4ed1-99e7-9195dd575d80",
+              "hasValidationError" : false,
+              "id" : "customCardColor"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 8,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Bar"
+                },
+                "data" : {
+                  "type" : "constant",
+                  "value" : [
+                    65,
+                    59,
+                    80,
+                    81,
+                    56,
+                    55,
+                    40
+                  ]
+                },
+                "labels" : {
+                  "type" : "constant",
+                  "value" : [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July"
+                  ]
+                },
+                "setLabels" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Default set label"
+                  ]
+                },
+                "legendHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "colors" : {
+                  "type" : "constant"
+                },
+                "options" : {
+                  "type" : "constant"
+                }
+              },
+              "reference" : "8d6025b2-65fe-4254-acdb-9a1824ee67ee",
+              "hasValidationError" : false,
+              "id" : "pbChart"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "caption" : {
+                  "type" : "interpolation"
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "headers" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Tanggal",
+                    "Keterangan",
+                    "Nominal"
+                  ]
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Bonita API"
+                },
+                "apiUrl" : {
+                  "type" : "constant",
+                  "value" : "../API/"
+                },
+                "params" : {
+                  "type" : "constant"
+                },
+                "content" : {
+                  "type" : "constant"
+                },
+                "columnsKey" : {
+                  "type" : "constant"
+                },
+                "sortColumns" : {
+                  "type" : "constant"
+                },
+                "selectedRow" : {
+                  "type" : "variable"
+                },
+                "pageSize" : {
+                  "type" : "constant",
+                  "value" : 10
+                },
+                "filter" : {
+                  "type" : "constant"
+                },
+                "striped" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "condensed" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "bordered" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "3fedfe84-d8c8-4f67-8231-de8a311ac091",
+              "hasValidationError" : false,
+              "id" : "pbDataTable"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "variables" : {
+    "anggota" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findById [id.ikon.keanggotaan.Anggota]\",\"businessObjectName\":\"undefined\",\"query\":{\"name\":\"findById\",\"displayName\":\"findById\"},\"id\":\"id.ikon.keanggotaan.Anggota\",\"filters\":[{\"name\":\"id\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{aid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"1\"}}"
+      ],
+      "exposed" : false
+    },
+    "aid" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.loggedUser.user_name;"
+      ],
+      "exposed" : false
+    },
+    "debug" : {
+      "type" : "expression",
+      "value" : [
+        "//$data.aid=4000001;"
+      ],
+      "exposed" : false
+    },
+    "simpanan" : {
+      "type" : "businessdata",
+      "value" : [
+        "{\"displayValue\":\"findByIdAnggota [id.ikon.fasilitas.Simpan]\",\"businessObjectName\":\"Simpan\",\"query\":{\"name\":\"findByIdAnggota\",\"displayName\":\"findByIdAnggota\"},\"id\":\"id.ikon.fasilitas.Simpan\",\"filters\":[{\"name\":\"idAnggota\",\"type\":\"INTEGER\",\"collection\":false,\"value\":\"{{aid}}\"}],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
+      ],
+      "exposed" : false
+    },
+    "loggedUser" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    }
+  },
+  "assets" : [
+    {
+      "id" : "cd1798c2-b060-4ee0-a51c-317beff1b8bc",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "dbd5944e-db68-4bfb-a787-efd4d54e2f87",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}

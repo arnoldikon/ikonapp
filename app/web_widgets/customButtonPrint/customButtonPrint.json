@@ -1,0 +1,44 @@
+{
+  "id" : "customButtonPrint",
+  "name" : "buttonPrint",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "previousArtifactVersion" : "1.11.40",
+  "lastUpdate" : 1709263269257,
+  "template" : "@customButtonPrint.tpl.html",
+  "controller" : "@customButtonPrint.ctrl.js",
+  "properties" : [
+    {
+      "label" : "Style",
+      "name" : "style",
+      "type" : "choice",
+      "defaultValue" : "default",
+      "choiceValues" : [
+        "default",
+        "primary",
+        "info",
+        "warning",
+        "danger",
+        "success"
+      ],
+      "bond" : "constant"
+    },
+    {
+      "label" : "Position",
+      "name" : "position",
+      "type" : "choice",
+      "defaultValue" : "left",
+      "choiceValues" : [
+        "left",
+        "center",
+        "right"
+      ],
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}

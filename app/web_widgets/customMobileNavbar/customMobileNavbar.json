@@ -1,0 +1,36 @@
+{
+  "id" : "customMobileNavbar",
+  "name" : "mobileNavbar",
+  "type" : "widget",
+  "custom" : true,
+  "modelVersion" : "2.4",
+  "lastUpdate" : 1709885666740,
+  "template" : "@customMobileNavbar.tpl.html",
+  "controller" : "@customMobileNavbar.ctrl.js",
+  "properties" : [
+    {
+      "label" : "User Picture URL",
+      "name" : "userPicUrl",
+      "type" : "text",
+      "bond" : "interpolation"
+    },
+    {
+      "label" : "Current session modal Id",
+      "name" : "currentSessionModalId",
+      "type" : "text",
+      "bond" : "interpolation"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "0df50be4-d2a7-4ff3-914d-84d0c03c4643",
+      "name" : "mobile-nav.css",
+      "type" : "css",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "webResources" : [ ],
+  "hasHelp" : false
+}
